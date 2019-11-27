@@ -1,4 +1,4 @@
-# Backend for the ride hailing app AbdulKareem
+# Backend for AbdulKareem
 
 ## How to run the Docker container
 
