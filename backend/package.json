@@ -35,9 +35,9 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "pre-push": "npm test"
-    },
-    "lint-staged": {
-      "*": "npm run lint"
     }
+  },
+  "lint-staged": {
+    "src/**/*.ts": "npm run lint"
   }
 }
