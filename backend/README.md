@@ -2,8 +2,6 @@
 
 ## How to run the Docker container
 
----
-
 ### Build image
 
 ```
