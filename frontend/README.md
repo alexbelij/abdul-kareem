@@ -1,3 +1,24 @@
+# Frontend for the ride hailing app AbdulKareem
+
+## How to run the Docker container
+
+---
+
+### Build image
+
+```
+docker build -t frontend/abdul-kareem .
+```
+
+### Run container
+
+```
+docker run -p 8080:3000 frontend/abdul-kareem
+```
+
+<br/>
+<br/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
