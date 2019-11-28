@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+  # Setup backend container
+  backend:
+    container_name: abdulkareem-backend
+    build: ./backend
+    expose:
+      - 3000
+    ports:
+      - 4000:3000
+    volumes:
+      - ./backend/src:/app/backend/src
+
+  # Setup frontend container
+  frontend:
+    container_name: abdulkareem-frontend
+    build: ./frontend
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend/src:/app/frontend/src
+      - ./frontend/public:/app/frontend/public
+
+  # Setup database
+  db:
+    container_name: abdulkareem-database
+    image: postgres
+    environment:
+      - POSTGRES_USER=abdulkareem
+      - POSTGERS_PASSWORD=abdulkareem
+      - POSTGRES_DB=abdulkareem
+    volumes:
+      - $HOME/docker/volumes/postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
