@@ -9,11 +9,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint'],
   env: {
     browser: true,
     es6: true,
@@ -25,11 +23,13 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'import/no-extraneous-dependencies': [
-      'error', {
-         'devDependencies': true,
-      }
+      'error',
+      {
+        devDependencies: true,
+      },
     ],
     'import/prefer-default-export': 'off',
-    'class-methods-use-this': 'off'
-  }
+    'class-methods-use-this': 'off',
+    'import/no-unresolved': 'off',
+  },
 };
